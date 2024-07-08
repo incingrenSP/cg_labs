@@ -55,6 +55,17 @@ if __name__ == '__main__':
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    circle(center, 0, 0, 30, 'yellow')
+                    circle(center, 100, 40, 5, 'brown')
+                    circle(center, 160, 60, 9, 'white')
+                    circle(center, 220, 80, 13, 'blue')
+                    circle(center, 280, 100, 7, 'red')
+                    circle(center, 380, 140, 22, 'orange')
+                    circle(center, 460, 180, 18, 'yellow')
+                    circle(center, 520, 220, 13, 'gray')
+                    circle(center, 560, 260, 15, 'light blue')
 
         # orbits
         ellipse(center[0], center[1], 50*2, 20*2, 'white')
@@ -65,19 +76,6 @@ if __name__ == '__main__':
         ellipse(center[0], center[1], 230*2, 90*2, 'white')
         ellipse(center[0], center[1], 260*2, 110*2, 'white')
         ellipse(center[0], center[1], 280*2, 130*2, 'white')
-
-
-        #  planets
-        circle(center, 0, 0, 30, 'yellow')
-        circle(center, 100, 40, 5, 'brown')
-        circle(center, 160, 60, 9, 'white')
-        circle(center, 220, 80, 13, 'blue')
-        circle(center, 280, 100, 7, 'red')
-        circle(center, 380, 140, 22, 'orange')
-        circle(center, 460, 180, 18, 'yellow')
-        circle(center, 520, 220, 13, 'gray')
-        circle(center, 560, 260, 15, 'light blue')
-
         pygame.display.update()
         
     pygame.quit()
